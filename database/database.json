@@ -36,7 +36,7 @@
   "users": [
     {
       "email": "tom@mail.com",
-      "password": "1234",
+      "password": "tom1234",
       "id": 1,
       "cart": [
         {
@@ -50,24 +50,24 @@
     },
     {
       "email": "jack@mail.com",
-      "password": "1234",
+      "password": "jack1234",
       "id": 2,
       "cart": []
     },
     {
       "email": "admin@mail.com",
-      "password": "1234",
+      "password": "admin1234",
       "id": 3
     },
     {
       "email": "kak@mail.com",
-      "password": "1234",
+      "password": "kak1234",
       "cart": [],
       "id": 4
     },
     {
       "email": "tim@mail.com",
-      "password": "1234",
+      "password": "tim1234",
       "cart": [
         {
           "userID": "5",
