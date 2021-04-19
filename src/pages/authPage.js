@@ -24,6 +24,7 @@ class AuthenticationPage extends Component {
             console.log(response.data)
             if (response.data.length > 0) {
                 console.log("Email already exist!")
+                this.props.authLogin(response.data[0])
             }
             else {
                 axios.post(URL_API+`/users`, {

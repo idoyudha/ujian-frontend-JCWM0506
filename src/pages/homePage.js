@@ -90,13 +90,14 @@ class HomePage extends Component {
 
     printCard() {
         return this.props.product_list.map((item, index) => {
-            return  <Card>
+            return  <div className="col-3">
+                    <Card>
                         <CardImg width="100" src={item.img} alt="Card image cap" />
                         <CardBody>
                         <CardTitle tag="h5">{item.name}</CardTitle>
                         <CardSubtitle tag="h6" className="mb-2 text-muted">Price: IDR {item.price}</CardSubtitle>
                         <CardSubtitle tag="h6" className="mb-2 text-muted">Stock: {item.stock}</CardSubtitle>
-                        <CardText>{item.description}</CardText>
+                        {/* <CardText>{item.description}</CardText> */}
                             <Button color="warning" block onClick={this.toggle}>Add to cart</Button>
                             <Modal size="lg" isOpen={this.state.modal} toggle={this.toggle} style={{width: '70%'}}>
                             <ModalHeader toggle={this.toggle} charCode="x">Add {item.name} to cart, define quantity</ModalHeader>
@@ -120,13 +121,14 @@ class HomePage extends Component {
                             </Modal>
                         </CardBody>
                     </Card>
+                    </div>
         })
     }
 
     render() { 
         console.log("cart user", this.props.cart)
         return (  
-            <div>
+            <div className="container-fluid">
                 <h1>Homepage</h1>
                 <div>
                 <div style={{display: 'none'}} innerRef={el => this.toast = el}>
@@ -140,7 +142,7 @@ class HomePage extends Component {
                     </Toast>
                 </div>
                 </div>
-                <div>
+                <div className="row">
                     {this.printCard()}
                 </div>
                 
